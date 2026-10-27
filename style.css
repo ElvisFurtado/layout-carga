@@ -18,11 +18,16 @@ body {
     border-radius: 16px;
 }
 
+.funx_container_lateral {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+}
+
 .funx_painel_lojas {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    width: 220px;
     padding: 20px;
     background-color: #fafbfc;
     border: 1px solid #e1e4e8;
@@ -111,11 +116,9 @@ body {
 .funx_indicador_fundo { border-bottom: 2px solid #e1e8ed; margin-bottom: 10px; }
 .funx_indicador_porta { border-top: 2px solid #e1e8ed; margin-top: 10px; }
 
-.funx_botao_limpar {
-    margin-top: 20px;
+.funx_botao_limpar, .funx_botao_whatsapp {
     width: 100%;
     padding: 14px;
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
     color: white;
     border: none;
     border-radius: 8px;
@@ -125,6 +128,11 @@ body {
     text-transform: uppercase;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: all 0.2s ease;
+}
+
+.funx_botao_limpar {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
 }
 
 .funx_botao_limpar:hover {
@@ -133,25 +141,9 @@ body {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.funx_botao_limpar:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
 .funx_botao_whatsapp {
     margin-top: 10px;
-    width: 100%;
-    padding: 14px;
     background: linear-gradient(135deg, #25D366, #128C7E);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
 }
 
 .funx_botao_whatsapp:hover {
@@ -160,7 +152,7 @@ body {
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.funx_botao_whatsapp:active {
+.funx_botao_limpar:active, .funx_botao_whatsapp:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -172,11 +164,18 @@ h3 {
     font-size: 1.2rem;
 }
 
+/* Responsividade corrigida */
 @media (max-width: 768px) {
     .funx_layout_principal {
         flex-direction: column;
+        align-items: center;
         padding: 20px 10px;
-        gap: 40px;
+        gap: 30px;
+    }
+
+    .funx_container_lateral {
+        width: 100%;
+        max-width: 350px;
     }
 
     .funx_painel_lojas {
@@ -196,11 +195,12 @@ h3 {
 
     .funx_area_caminhao {
         width: 100%;
+        align-items: center;
     }
 
     #funx_bau_caminhao {
         width: 100%;
-        max-width: 350px;
+        max-width: 320px;
         height: 450px;
         box-sizing: border-box;
     }

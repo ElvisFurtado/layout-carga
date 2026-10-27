@@ -54,7 +54,7 @@ funx_btn_whatsapp.addEventListener('click', () => {
         return;
     }
 
-    let funx_mensagem = "*Layout de Carga*\n\n";
+    let funx_mensagem = "🚚 *Layout de Carga* 🚚\n\n";
     funx_mensagem += "*(Fundo do Caminhão)*\n";
     
     funx_blocos_no_caminhao.forEach((funx_bloco, funx_index) => {
