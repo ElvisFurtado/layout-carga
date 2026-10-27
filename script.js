@@ -6,7 +6,12 @@ const funx_btn_whatsapp = document.getElementById('funx_btn_whatsapp');
 
 funx_elementos_arrastaveis.forEach(funx_item => {
     funx_item.addEventListener('click', (funx_evento) => {
-        const funx_bloco_clicado = funx_evento.target;
+        // Impede que o bloco se mova se o usuário clicou no input para digitar
+        if (funx_evento.target.tagName.toLowerCase() === 'input') {
+            return;
+        }
+        
+        const funx_bloco_clicado = funx_evento.target.closest('.funx_bloco_carga');
         
         if (funx_bloco_clicado.parentElement.id === 'funx_area_origem') {
             const funx_espaco_livre = funx_container_bau.querySelector('div[style*="flex-grow"]');
@@ -21,6 +26,7 @@ funx_btn_limpar.addEventListener('click', () => {
     const funx_todos_blocos = document.querySelectorAll('.funx_bloco_carga');
     funx_todos_blocos.forEach(funx_bloco => {
         funx_container_origem.appendChild(funx_bloco);
+        funx_bloco.querySelector('.funx_qtd_caixas').value = ''; // Limpa os inputs
     });
 });
 
@@ -36,7 +42,11 @@ funx_btn_whatsapp.addEventListener('click', () => {
     funx_mensagem += "*(Fundo do Caminhão)*\n";
     
     funx_blocos_no_caminhao.forEach((funx_bloco, funx_index) => {
-        funx_mensagem += `${funx_index + 1}º - ${funx_bloco.innerText}\n`;
+        const funx_nome = funx_bloco.querySelector('.funx_nome_loja').innerText;
+        const funx_qtd = funx_bloco.querySelector('.funx_qtd_caixas').value;
+        const funx_texto_qtd = funx_qtd ? ` (${funx_qtd} volumes)` : '';
+        
+        funx_mensagem += `${funx_index + 1}º - ${funx_nome}${funx_texto_qtd}\n`;
     });
     
     funx_mensagem += "*(Porta do Baú)*\n\n";
