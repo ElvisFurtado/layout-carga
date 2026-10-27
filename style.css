@@ -171,3 +171,43 @@ h3 {
     margin-bottom: 20px;
     font-size: 1.2rem;
 }
+
+@media (max-width: 768px) {
+    .funx_layout_principal {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 40px;
+    }
+
+    .funx_painel_lojas {
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .funx_bloco_carga {
+        flex: 1 1 40%;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .funx_area_caminhao {
+        width: 100%;
+    }
+
+    #funx_bau_caminhao {
+        width: 100%;
+        max-width: 350px;
+        height: 450px;
+        box-sizing: border-box;
+    }
+
+    #funx_bau_caminhao::before {
+        width: 140px;
+        height: 40px;
+        top: -50px;
+    }
+}
