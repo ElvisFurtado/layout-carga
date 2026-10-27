@@ -40,7 +40,7 @@ body {
     padding: 16px;
     text-align: center;
     color: white;
-    cursor: pointer; /* Alterado para pointer */
+    cursor: pointer; 
     font-weight: 600;
     letter-spacing: 0.5px;
     border-radius: 8px;
@@ -85,6 +85,7 @@ body {
     gap: 8px;
     position: relative;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-top: 70px;
 }
 
 #funx_bau_caminhao::before {
@@ -201,6 +202,7 @@ h3 {
         max-width: 320px;
         height: 450px;
         box-sizing: border-box;
+        margin-top: 60px;
     }
 
     #funx_bau_caminhao::before {
