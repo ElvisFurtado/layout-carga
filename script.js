@@ -42,7 +42,7 @@ funx_btn_whatsapp.addEventListener('click', () => {
     funx_mensagem += "*(Porta do Baú)*\n\n";
     funx_mensagem += "Atenção: A primeira loja a ser descarregada deve ser a última da lista (Porta do Baú).";
 
-    const funx_numero_whatsapp = "5519992811795";
+    const funx_numero_whatsapp = "5519996139304";
     const funx_url = `https://wa.me/${funx_numero_whatsapp}?text=${encodeURIComponent(funx_mensagem)}`;
     
     window.open(funx_url, '_blank');
