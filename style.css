@@ -40,7 +40,7 @@ body {
     padding: 16px;
     text-align: center;
     color: white;
-    cursor: grab;
+    cursor: pointer; /* Alterado para pointer */
     font-weight: 600;
     letter-spacing: 0.5px;
     border-radius: 8px;
@@ -54,7 +54,6 @@ body {
 }
 
 .funx_bloco_carga:active {
-    cursor: grabbing;
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -164,7 +163,6 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* Responsividade corrigida */
 @media (max-width: 768px) {
     .funx_layout_principal {
         flex-direction: column;
